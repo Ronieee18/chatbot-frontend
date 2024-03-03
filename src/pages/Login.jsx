@@ -27,6 +27,12 @@ function Login() {
         toast.error("User Not found ",{id:"login"})}
       else if(error.response && error.response.data === "Invalid credentials"){
       toast.error("Invalid credentials",{id:"login"})}
+      else if (error.response && error.response.data.errors[0].msg === "Email is required") {
+        toast.error("Email is required",{id:"login"})
+      }
+      else if (error.response && error.response.data.errors[0].msg === "Password must be more than 6 characters") {
+        toast.error("Password must be more than 6 characters",{id:"login"})
+      }
       else{
         toast.error("Something went wrong!",{id:"login"});
       }
