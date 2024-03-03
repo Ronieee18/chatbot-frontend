@@ -7,7 +7,7 @@ import {BrowserRouter} from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext.jsx'
 import axios from 'axios'
 import {Toaster} from 'react-hot-toast'
-axios.defaults.baseURL="http://localhost:8000/api/v1"
+axios.defaults.baseURL="https://chatbot-backend-pb01.onrender.com/api/v1"  //production server
 axios.defaults.withCredentials=true;
 
 const theme=createTheme({
